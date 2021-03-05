@@ -287,6 +287,15 @@ nav{
 
 .picLinks{
     width: 72%;
+    position: relative;
+    color: white;
+}
+
+.external.md-18{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 18px;
 }
 
 .sImg1, .sImg2, .sImg3, .sImg4{
@@ -335,7 +344,6 @@ nav{
 }
 
 
-
 .linkInfo{
     padding: 8% 0;
 }
@@ -350,6 +358,7 @@ nav{
     font-size: 15px;
     font-weight: 300;
 }
+
 
 
 
