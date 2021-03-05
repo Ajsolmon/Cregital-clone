@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap');
 
 
 
@@ -19,13 +18,32 @@
     background: #C7C7C7;
 }
 
+a.linked:link, a.linked:visited{
+    color: white;
+    text-decoration: none;
+}
+
+a.linked{
+    border-bottom: 1px solid #f5f5f5;
+}
+
+a.linked::after{
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: #333333;
+}
+
+/* a.linked:hover{
+    background: linear-gradient(to top, , transparent);
+    border-bottom: none;
+} */
+
 header{
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    font-size: 15px;
-    font-weight: bold;
 }
 
 nav{
@@ -33,6 +51,8 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 30px 5%;
+    z-index: 99;
+    mix-blend-mode: difference;
 }
 
 .cregitalLogoWrap{
@@ -44,12 +64,14 @@ nav{
 .menuItems{
     display: flex;
     align-items: center;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .hamburger{
     width: 25px;
     height: 15px;
-    margin-right: 5px;
+    margin-right: 8px;
     position: relative;
 }
 
@@ -87,9 +109,9 @@ nav{
 
 .section1 h1{
     font-size: 100px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.3em;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     width: 60%;
     margin: 40px 0;
 }
@@ -97,30 +119,31 @@ nav{
 .section1 p{
     font-size: 25px;
     font-weight: 300;
-    line-height: 1.6em;
+    line-height: 1.5em;
     width: 50%;
 }
 
 .openForm{
+    background: url('penIcon.svg') no-repeat center/100%;
+    background-color: #000;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     position: fixed;
-    bottom: 8%;
-    right: 5%;
-    background: black;
-    display: grid;
-    place-items: center;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
 }
 
-.openForm::after{
-    position: absolute;
+.openFormAnim{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
     content: '';
+    background: black;
     width: 50px;
     height: 50px;
-    background: black;
     border-radius: 50%;
-    z-index: -1;
     animation: fade 2s ease-out infinite;
 }
 
@@ -139,3 +162,256 @@ nav{
     color: white;
 }
 
+
+
+.learnMore{
+    min-height: 100vh;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-align: center;
+}
+
+.learnMore h1{
+    width: 70%;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
+
+
+
+
+/* DROP A LINE MODAL */
+.dropALine{
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 10px 5%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.dropALine h1{
+    font-size: 75px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.dropALine p{
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.cregitalLogoWrapDAL{
+    position: absolute;
+    top: 30px;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+}
+
+.sendMessageWrap{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sendMessageWrap input:not(#smButton){
+    width: 100%;
+    padding: 20px 7px;
+    margin-bottom: 15px;
+    border: thin solid white;
+    border-width: 0 0 1px 0;
+    outline: none;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: transparent;
+    color: white;
+}
+
+.sendMessageWrap textarea{
+    padding: 20px 7px;
+    margin-bottom: 30px;
+    border: thin solid white;
+    border-width: 0 0 1px 0;
+    outline: none;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: transparent;
+    color: white;
+}
+
+#smButton{
+    height: 60px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* section 2 */
+.section2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+.picLinkWrap{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.picLinks{
+    width: 72%;
+}
+
+.sImg1, .sImg2, .sImg3, .sImg4{
+    width: 100%;
+    height: 400px;
+}
+
+
+.sImg1{
+    background: url('coronation.jpg') no-repeat center;
+    background-size:  auto 100%;
+}
+.sImg2{
+    background: url('sterling.jpg') no-repeat center;
+    background-size:  auto 100%;
+}
+.sImg3{
+    background: url('heirs.jpg') no-repeat center;
+    background-size:  auto 100%;
+}
+.sImg4{
+    background: url('ARK.svg') no-repeat center;
+    background-size:  auto 100%;
+}
+
+
+.lImg1, .lImg2, .lImg3, .lImg4{
+    width: 100%;
+    height: 600px;
+}
+
+
+.lImg1{
+    background: url('disha.jpg') no-repeat center/100% ;
+}
+.lImg2{
+    background: url('hash.png') no-repeat center/100% ;
+}
+.lImg3{
+    background: url('TEF.jpg') no-repeat center;
+    background-size:  auto 100%;
+}
+.lImg4{
+    background: url('zenith.jpg') no-repeat center;
+    background-size:  auto 100%;
+}
+
+
+
+.linkInfo{
+    padding: 8% 0;
+}
+
+.linkInfo h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.linkInfo p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+
+
+/* SECTION 3 */
+.section3{
+    min-height: 100vh;
+    padding: 20px 8% 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section3 h1{
+    font-size: 75px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+
+.section3 p{
+    width: 70%;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 42.5px;
+    text-align: left;
+    margin-bottom: 50px;
+    align-self: flex-end;
+}
+
+.aboutImg{
+    width: 100%;
+}
+
+
+
+/* FOOTER */
+footer{
+    padding: 5% 8% 3% 8%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer h1{
+    font-size: 75px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 45px;
+}
+
+footer > p{
+    width: 70%;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.7em;
+    text-align: left;
+    margin-bottom: 0.7rem;
+    align-self: flex-end;
+}
+
+.endNote{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-top: 9%;
+}
+
+.rightContent p{
+    padding-left: 10px;
+    display: inline-block;
+}
