@@ -19,7 +19,7 @@
 }
 
 a.linked:link, a.linked:visited{
-    color: white;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -28,28 +28,26 @@ a.linked{
     border-bottom: 1px solid #aaa;
 }
 
-.linked::after{
+a.linked:hover{
+    border-bottom: none;
+}
+
+a.linked::after{
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 10%;
+    height: 0;
     background: #aaaaaa66;
+    transition: height 0.2s ease;
 }
 
-a.linked:hover .linked::after{
-    background: green;
+a.linked:hover::after{
+    height: 98%;
 }
 
-@keyframes linkBG{
-    0%{
-        height: 0%;
-    }
-    100%{
-        height: 100%;
-    }
-}
+
 
 
 header{
@@ -424,7 +422,9 @@ footer > p{
     padding-top: 9%;
 }
 
-.rightContent p{
+.rightContent a{
+    text-decoration: none;
+    color: inherit;
     padding-left: 10px;
     display: inline-block;
 }
