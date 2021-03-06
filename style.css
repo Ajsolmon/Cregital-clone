@@ -4,14 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap');
 
 
-
-
-/* HEADER */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'IBM Plex Sans', sans-serif;
+    cursor: none;
 }
 
 ::selection{
@@ -47,14 +45,31 @@ a.linked:hover::after{
     height: 98%;
 }
 
+.myCursor{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    transition: 0.1s;
+    background-color: white;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    translate: (50%, 50%);
+    mix-blend-mode: difference;
+    z-index: 100;
+}
 
 
+/* HEADER */
 
 header{
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+    background-color: black;
+    mix-blend-mode: difference;
+    z-index: 99;
 }
 
 nav{
@@ -62,14 +77,13 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 30px 5%;
-    z-index: 99;
-    mix-blend-mode: difference;
 }
 
 .cregitalLogoWrap{
-    filter: invert(1);
     width: 40px;
     height: 40px;
+    mix-blend-mode: difference;
+    z-index: 99;
 }
 
 .menuItems{
@@ -77,6 +91,9 @@ nav{
     align-items: center;
     font-size: 15px;
     font-weight: 600;
+    color: white;
+    mix-blend-mode: difference;
+    z-index: 99;
 }
 
 .hamburger{
@@ -92,7 +109,7 @@ nav{
     content: '';
     width: 25px;
     height: 3px;
-    background: black;
+    background-color: white;
 }
 
 .hamburger::after{
@@ -101,7 +118,7 @@ nav{
     content: '';
     width: 25px;
     height: 3px;
-    background: black;
+    background-color: white;
 }
 
 
@@ -110,6 +127,7 @@ nav{
 
 /* SECTION 1 */
 .section1{
+    background-color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -136,45 +154,29 @@ nav{
 
 .openForm{
     background: url('penIcon.svg') no-repeat center/100%;
-    background-color: #000;
+    background-color: white;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     position: fixed;
     bottom: 50px;
     right: 50px;
-    z-index: 1;
-}
-
-.openFormAnim{
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    content: '';
-    background: black;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    z-index: 99;
     animation: fade 2s ease-out infinite;
+    mix-blend-mode: difference;
 }
 
 @keyframes fade{
     50%{
-        opacity: 1;
-        transform: scale(1);
+        box-shadow: 0 0 0 0px white;
     }
     100%{
-        opacity: 0;
-        transform: scale(2);
+        box-shadow: 0 0 0 50px black;
     }
 }
 
-.pen{
-    color: white;
-}
 
-
-
+/* LEARN MORE MODAL */
 .learnMore{
     min-height: 100vh;
     background-color: black;
@@ -198,7 +200,6 @@ nav{
 /* DROP A LINE MODAL */
 .dropALine{
     min-height: 100vh;
-    background-color: black;
     color: white;
     padding: 10px 5%;
     position: relative;
@@ -206,6 +207,8 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: black;
+    z-index: 0;
 }
 
 
@@ -269,6 +272,7 @@ nav{
 
 /* section 2 */
 .section2{
+    background: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -288,14 +292,13 @@ nav{
 .picLinks{
     width: 72%;
     position: relative;
-    color: white;
 }
 
-.external.md-18{
+.material-icons{
+    color: white;
     position: absolute;
     right: 25px;
     top: 25px;
-    font-size: 18px;
 }
 
 .sImg1, .sImg2, .sImg3, .sImg4{
@@ -369,6 +372,7 @@ nav{
     padding: 20px 8% 80px;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 .section3 h1{
@@ -429,6 +433,10 @@ footer > p{
     font-size: 1rem;
     font-weight: 400;
     padding-top: 9%;
+}
+
+.colouredP{
+    color: #4d4d3c;
 }
 
 .rightContent a{
