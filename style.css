@@ -49,15 +49,25 @@ a.linked:hover::after{
     width: 30px;
     height: 30px;
     position: fixed;
-    transition: 0.1s;
+    transition: 0.000001s;
     background-color: white;
-    top: 0;
-    left: 0;
+    top: 15px;
+    left: 15px;
     border-radius: 50%;
-    translate: (50%, 50%);
     mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
     z-index: 100;
+    pointer-events: none;
+    display: grid;
+    place-items: center;
 }
+
+.myCursor.hover{
+    transition: 0.2s;
+    transform: scale(3);
+}
+
+
 
 
 /* HEADER */
@@ -84,6 +94,7 @@ nav{
     height: 40px;
     mix-blend-mode: difference;
     z-index: 99;
+    cursor: pointer;
 }
 
 .menuItems{
@@ -94,6 +105,7 @@ nav{
     color: white;
     mix-blend-mode: difference;
     z-index: 99;
+    cursor: pointer;
 }
 
 .hamburger{
@@ -101,6 +113,7 @@ nav{
     height: 15px;
     margin-right: 8px;
     position: relative;
+    cursor: pointer;
 }
 
 .hamburger::before{
@@ -164,6 +177,7 @@ nav{
     z-index: 99;
     animation: fade 2s ease-out infinite;
     mix-blend-mode: difference;
+    cursor: pointer;
 }
 
 @keyframes fade{
@@ -171,7 +185,7 @@ nav{
         box-shadow: 0 0 0 0px white;
     }
     100%{
-        box-shadow: 0 0 0 50px black;
+        box-shadow: 0 0 0 25px black;
     }
 }
 
@@ -249,6 +263,7 @@ nav{
     font-weight: 400;
     background-color: transparent;
     color: white;
+    cursor: text;
 }
 
 .sendMessageWrap textarea{
@@ -261,12 +276,19 @@ nav{
     font-weight: 400;
     background-color: transparent;
     color: white;
+    cursor: text;
 }
 
 #smButton{
     height: 60px;
     font-size: 15px;
     font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#smButton:hover{
+    background-color: #b5b5b5;
 }
 
 
