@@ -2,11 +2,15 @@
 let cursor = document.querySelector('.myCursor')
 let cregitalLogoWrap = document.querySelector('.cregitalLogoWrap')
 let menuItems = document.querySelector('.menuItems')
+let menu = document.querySelector('.menu')
 let openForm = document.querySelector('.openForm')
 let learnMore = document.querySelector('.learnMore')
 let dropALine = document.querySelector('.dropALine')
 let picLinks = document.querySelectorAll('.picLinks')
 let mainLinks = document.querySelectorAll('.mainLinks')
+let hamburger = document.querySelector('.hamburger')
+let strokei = document.querySelector('.strokei')
+let strokeii = document.querySelector('.strokeii')
 
 
 
@@ -95,14 +99,31 @@ document.body.addEventListener('mouseleave', (e) =>{
 
 //HIDING THE HIDEABLES
 menuItems.addEventListener('click', () =>{
-    if(learnMore.style.display === 'none'){
+    
+    if(learnMore.style.display == 'none'){
         learnMore.style.display = 'grid'
+        openForm.style.display = 'none'
+
+        menu.innerText = 'CLOSE'
+
+        hamburger.style.height = '3px'
+
+        strokei.classList.add('rotright')
+        strokeii.classList.add('rotleft')
     
         setTimeout(() => {
             document.querySelector('.learnMore>h1').classList.add('moveUp')
         }, 1);
     }else{
+        menu.innerText = 'MENU'
+        
+        hamburger.style.height = '15px'
+
+        strokei.classList.remove('rotright')
+        strokeii.classList.remove('rotleft')
+    
         learnMore.style.display = 'none'
+        openForm.style.display = 'grid'
     
         document.querySelector('.learnMore>h1').classList.remove('moveUp')
     }
@@ -110,8 +131,12 @@ menuItems.addEventListener('click', () =>{
 
 openForm.addEventListener('click', ()=>{
     if(dropALine.style.display === 'none'){
+        
         dropALine.style.display = 'flex'
-    
+        menuItems.style.display = 'none'
+
+        openForm.classList.add('opened')
+
         setTimeout(() => {
             document.querySelector('.dropALine>h1').classList.add('moves')
             document.querySelector('.dropALine>p').classList.add('moves')
@@ -119,6 +144,9 @@ openForm.addEventListener('click', ()=>{
         }, 1);
     }else{
         dropALine.style.display = 'none'
+        menuItems.style.display = 'flex'
+
+        openForm.classList.remove('opened')
         
         document.querySelector('.dropALine>h1').classList.remove('moves')
         document.querySelector('.dropALine>p').classList.remove('moves')
