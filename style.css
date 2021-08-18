@@ -246,6 +246,7 @@ nav{
     place-items: center;
     color: white;
     text-align: center;
+    z-index: 50;
 }
 
 .learnMore h1{
@@ -284,7 +285,7 @@ nav{
     flex-direction: column;
     align-items: center;
     background-color: black;
-    z-index: 0;
+    z-index: 50;
 }
 
 
@@ -620,7 +621,7 @@ footer > p{
     
     /* SECTION 1 */
     .section1{
-        padding: 4% 8% 0 8%;
+        padding: 4% 8% 3% 8%;
         min-height: auto;
     }
     
@@ -645,33 +646,11 @@ footer > p{
     
     
     /* LEARN MORE MODAL */
-    .learnMore{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        background-color: black;
-        display: none;
-        place-items: center;
-        color: white;
-        text-align: center;
-    }
-    
+
     .learnMore h1{
-        width: 70%;
-        font-size: 70px;
-        font-weight: 600;
-        line-height: 1.3em;
-        transform: translateY(70%);
-        opacity: 0.5;
-        transition: 1s cubic-bezier(0,.6,.76,1.19);
-    }
-    
-    .learnMore h1.moveUp{
-        transform: translateY(0);
-        opacity: 1;
-    }
-    
+        width: 80%;
+        font-size: 50px;
+    }  
     
     
     
@@ -681,110 +660,28 @@ footer > p{
     
     /* DROP A LINE MODAL */
     .dropALine{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
         min-height: 100vh;
-        color: white;
-        padding: 10px 5%;
-        text-align: center;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: black;
-        z-index: 0;
+        padding: 5% 5%;
     }
     
     
     .dropALine h1{
-        font-size: 75px;
+        font-size: 50px;
         font-weight: 600;
         margin-bottom: 40px;
-        transition: transform 1s ease-out, opacity 0.5s ease-out;
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    
-    
-    .dropALine h1.moves{
-        opacity: 1;
-        transform: translateY(0);
     }
     
     .dropALine p{
-        font-size: 25px;
-        font-weight: 300;
-        margin-bottom: 50px;
-        opacity: 0;
-        transition: transform 1s ease-out, opacity 0.5s ease-out;
-    }
-    
-    .dropALine p.moves{
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    .cregitalLogoWrapDAL{
-        position: absolute;
-        top: 30px;
-        left: 5%;
-        width: 40px;
-        height: 40px;
+        font-size: 20px;
+        margin-bottom: 30px;
     }
     
     .sendMessageWrap{
-        width: 55%;
-        display: flex;
-        flex-direction: column;
-        transition: transform 1s ease-out, opacity 0.5s ease-out;
-        transform: translateY(250px);
-        opacity: 0;
-    }
-    
-    
-    .sendMessageWrap.moves{
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    .sendMessageWrap input:not(#smButton){
-        width: 100%;
-        padding: 20px 7px;
-        margin-bottom: 15px;
-        border: thin solid white;
-        border-width: 0 0 1px 0;
-        outline: none;
-        font-size: 1em;
-        font-weight: 400;
-        background-color: transparent;
-        color: white;
-        cursor: text;
-    }
-    
-    .sendMessageWrap textarea{
-        padding: 20px 7px;
-        margin-bottom: 30px;
-        border: thin solid white;
-        border-width: 0 0 1px 0;
-        outline: none;
-        font-size: 1em;
-        font-weight: 400;
-        background-color: transparent;
-        color: white;
-        cursor: text;
+        width: 80%;
     }
     
     #smButton{
-        height: 60px;
-        font-size: 15px;
-        font-weight: 600;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-    
-    #smButton:hover{
-        background-color: #b5b5b5;
+        font-size: 13px;
     }
     
     
@@ -814,60 +711,27 @@ footer > p{
     
     .material-icons.md-18{
         font-size: 19px;
-        outline: 1px solid black;
     }
     
     .sImg1, .sImg2, .sImg3{
-        width: 100%;
-        height: 400px;
-        cursor: pointer;
-    }
-    
-    
-    .sImg1{
-        background: url('coronation.jpg') no-repeat center;
-        background-size:  auto 100%;
-    }
-    .sImg2{
-        background: url('heirs.jpg') no-repeat center;
-        background-size:  auto 100%;
-    }
-    .sImg3{
-        background: url('ARK.svg') no-repeat center;
-        background-size:  auto 100%;
+        height: 250px;
     }
     
     
     .lImg1, .lImg2, .lImg3, .lImg4, .lImg5{
-        width: 100%;
-        height: 600px;
-        cursor: pointer;
+        height: 400px;
     }
     
-    
-    .lImg1{
-        background: url('Fbank.jpg') no-repeat center ;
-        background-size:  auto 100%;
-    }
 
     .lImg2{
-        background: url('disha.jpg') no-repeat center/100% ;
+        background: url('disha.jpg') no-repeat center ;
+        background-size: auto 100%;
     }
 
     .lImg3{
-        background: url('hash.png') no-repeat center/100% ;
+        background: url('hash.png') no-repeat center ;
+        background-size: auto 100%;
     }
-
-    .lImg4{
-        background: url('TEF.jpg') no-repeat center;
-        background-size:  auto 100%;
-    }
-
-    .lImg5{
-        background: url('zenith.jpg') no-repeat center;
-        background-size:  auto 100%;
-    }
-    
     
     .linkInfo{
         padding: 0 0 8% 0;
@@ -891,80 +755,40 @@ footer > p{
     .section3{
         min-height: 100vh;
         padding: 20px 8% 80px;
-        display: flex;
-        flex-direction: column;
-        background-color: white;
     }
     
     .section3 h1{
-        font-size: 75px;
-        font-weight: 600;
-        text-align: left;
+        font-size: 50px;
         margin-bottom: 25px;
     }
     
     
     .section3 p{
-        width: 70%;
-        font-size: 25px;
-        font-weight: 300;
-        line-height: 42.5px;
-        text-align: left;
+        width: 90%;
+        font-size: 20px;
         margin-bottom: 50px;
-        align-self: flex-end;
-    }
-    
-    .aboutImg{
-        width: 100%;
     }
     
     
     
     /* FOOTER */
     footer{
-        padding: 5% 8% 3% 8%;
-        background-color: #000;
-        color: white;
-        display: flex;
-        flex-direction: column;
+        padding: 9% 8%;
     }
     
     footer h1{
-        font-size: 75px;
-        font-weight: 600;
-        line-height: 1.5;
-        text-align: left;
-        margin-bottom: 45px;
+        font-size: 50px;
+        margin-bottom: 35px;
     }
     
     footer > p{
-        width: 70%;
-        font-size: 25px;
-        font-weight: 300;
-        line-height: 1.7em;
-        text-align: left;
-        margin-bottom: 0.7rem;
-        align-self: flex-end;
+        width: 80%;
+        font-size: 20px;
     }
     
     .endNote{
-        background-color: #000;
-        display: flex;
-        justify-content: space-between;
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: 13px;
         padding-top: 9%;
-    }
-    
-    .colouredP{
-        color: #4d4d3c;
-    }
-    
-    .rightContent a{
-        text-decoration: none;
-        color: inherit;
-        padding-left: 10px;
-        display: inline-block;
     }
     
     
