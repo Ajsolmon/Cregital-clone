@@ -517,6 +517,9 @@ nav{
 
 
 
+
+
+
 /* FOOTER */
 footer{
     padding: 5% 8% 3% 8%;
@@ -796,4 +799,234 @@ footer > p{
     
     
     
+}
+
+@media screen and (max-width: 767px){
+       
+    .myCursor{
+        display: none;
+        visibility: hidden;
+    }
+    
+    
+    /* HEADER */
+        
+    nav{
+        padding: 30px 5%;
+    }
+    
+    .cregitalLogoWrap{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .menuItems{
+        font-size: 13px;
+    }
+    
+    .menu{
+        cursor: pointer;
+    }
+    
+    .hamburger{
+        width: 20px;
+        height: 13.5px;
+        margin-right: 8px;
+    }
+    
+    .strokei{
+        width: 20px;
+        height: 1.5px;
+    }
+    
+    .strokeii{
+        width: 20px;
+        height: 1.5px;
+    }
+    
+    
+    
+    
+    
+    
+    /* SECTION 1 */
+    .section1{
+        padding: 4% 8% 3% 8%;
+        min-height: 100vh;
+    }
+    
+    .section1 h1{
+        font-size: 45px;
+        width: 100%;
+        margin: 0 0;
+        margin: 15% 0 0 0;
+    }
+    
+    .section1 p{
+        padding: 0;
+        margin:  0.9rem 3%;
+        font-size: 18px;
+        width: 100%;
+    }
+    
+    
+    
+    
+    /* LEARN MORE MODAL */
+
+    .learnMore h1{
+        width: 70%;
+        font-size: 35px;
+    }  
+    
+    
+    
+        
+    .openForm{
+        display: none;
+        visibility: hidden;
+    }
+    
+    
+
+
+
+
+
+    /* section 2 */
+    .section2{
+        padding: 0 8% 10%;
+    }
+
+    .picLinkWrap{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .picLinks{
+        width: 100%;
+        position: relative;
+    }
+
+    .material-icons.md-18{
+        font-size: 18px;
+    }
+        
+    .sImg1, .sImg2, .sImg3{
+        height: 250px;
+    }
+
+
+    .sImg1{
+        background: url('coronation.jpg') no-repeat center;
+        background-size:  100%;
+    }
+    .sImg2{
+        background: url('heirs.jpg') no-repeat center;
+        background-size:  100%;
+    }
+    .sImg3{
+        background: url('ARK.svg') no-repeat center;
+        background-size:  100%;
+    }
+
+
+    .lImg1, .lImg2, .lImg3, .lImg4, .lImg5{
+        height: 400px;
+    }
+
+
+    .lImg1{
+        background: url('Fbank.jpg') no-repeat center/100% ;
+    }
+    .lImg2{
+        background: url('disha.jpg') no-repeat center/100% ;
+    }
+    .lImg3{
+        background: url('hash.png') no-repeat center/100% ;
+    }
+    .lImg4{
+        background: url('TEF.jpg') no-repeat center;
+        background-size:  auto 100%;
+    }
+    .lImg5{
+        background: url('zenith.jpg') no-repeat center;
+        background-size: auto 100%;
+    }
+
+    .linkInfo{
+        padding: 8% 0 15%;
+    }
+
+    .linkInfo h1{
+        font-size: 25px;
+    }
+
+    .linkInfo p{
+        font-size: 13px;
+    }
+
+
+
+
+
+
+
+
+    /* SECTION 3 */
+    .section3{
+        min-height: 100vh;
+        padding: 20px 8% 80px;
+    }
+
+    .section3 h1{
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+
+    .section3 p{
+        width:100%;
+        font-size: 18px;
+        line-height: 1.7em;
+    }
+
+
+
+
+
+
+    /* FOOTER */
+    footer{
+        padding: 10% 8% 3% 8%;
+    }
+
+    footer h1{
+        font-size: 35px;
+    }
+
+    footer > p{
+        width: 100%;
+        font-size: 18px;
+        align-self: flex-start;
+    }
+
+    .endNote{
+        flex-direction: column;
+        justify-content: unset;
+        font-size: 13px;
+        padding-top: 9%;
+    }
+
+    .rightContent a:not(:first-of-type){
+        margin: 40px 0 30px 30px ;
+    }
+
+
+    .rightContent a{
+        padding-left: 0;
+    }
+
+
+
 }
