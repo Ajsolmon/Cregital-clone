@@ -98,9 +98,13 @@ document.body.addEventListener('mouseleave', (e) =>{
 
 
 //HIDING THE HIDEABLES
+
+    let clicks = 0
 menuItems.addEventListener('click', () =>{
-    
-    if(learnMore.style.display == 'none'){
+    clicks += 1
+
+
+    if(clicks%2 == 1 ){
         learnMore.style.display = 'grid'
         openForm.style.display = 'none'
 
