@@ -601,22 +601,31 @@ footer > p{
     
     .hamburger{
         width: 20px;
-        height: 13.5px;
+        height: 20px !important; /*element.style was overriding the height value after clicking the hamburger and making the height shorter so important to increase the specificity */
         margin-right: 8px;
     }
     
     .strokei{
         width: 20px;
-        height: 1.5px;
+        height: 3px;
+        top: 4px;
     }
     
     .strokeii{
         width: 20px;
-        height: 1.5px;
+        height: 3px;
+        bottom: 4px;
     }
-    
-    
-    
+
+    .strokei.rotright{
+        transform: rotate(45deg) translate(0, 6px);
+        transform-origin: unset;
+    }
+
+    .strokeii.rotleft{
+        transform: rotate(-45deg) translate(0, -6px);
+        transform-origin: unset;
+    }
     
     
     
@@ -713,7 +722,7 @@ footer > p{
     }
     
     .material-icons.md-18{
-        font-size: 19px;
+        font-size: 20px;
     }
     
     .sImg1, .sImg2, .sImg3{
