@@ -819,7 +819,13 @@ footer > p{
     
     
     /* HEADER */
-        
+            
+    header{
+        position: static;
+        background-color: white;
+        mix-blend-mode: normal;
+    }
+
     nav{
         padding: 30px 5%;
     }
@@ -839,7 +845,7 @@ footer > p{
     
     .hamburger{
         width: 20px;
-        height: 13.5px;
+        height: 13.5px !important;
         margin-right: 8px;
     }
     
@@ -851,8 +857,17 @@ footer > p{
     .strokeii{
         width: 20px;
         height: 1.5px;
+    }    
+
+    .strokei.rotright{
+        transform: rotate(45deg) translate(0, 8px);
+        transform-origin: unset;
     }
-    
+
+    .strokeii.rotleft{
+        transform: rotate(-45deg) translate(0, -8px);
+        transform-origin: unset;
+    }
     
     
     
@@ -860,7 +875,7 @@ footer > p{
     
     /* SECTION 1 */
     .section1{
-        padding: 4% 8% 3% 8%;
+        padding: 0% 8% 3% 8%;
         min-height: 100vh;
     }
     
@@ -868,7 +883,7 @@ footer > p{
         font-size: 45px;
         width: 100%;
         margin: 0 0;
-        margin: 15% 0 0 0;
+        margin: -15% 0 0 0;
     }
     
     .section1 p{
